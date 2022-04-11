@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  border: 1px solid gray;
+  width: 400px;
+  gap: 10px;
+}
+.con-1 {
+  background-color: #ffdc40;
+  width: 100%;
+  height: 28px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+#clearInput {
+  border: none;
+  border-radius: 35px;
+  background-color: white;
+}
+.input {
+  display: flex;
+  align-items: center;
+}
+#myInput {
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 40px;
+  width: 330px;
+  padding-left: 10px;
+}
+#clearInput {
+  position: absolute;
+  right: 60px;
+  border-radius: 71px;
+  background: none;
+}
+#sortButton {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 40px;
+  top: 100px;
+}
+#addButton {
+  width: 150px;
+  height: 42px;
+  background: #833ae0;
+  border-radius: 71px;
+  border: none;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+.plus {
+  border-radius: 71px;
+  background-color: #9953f1;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  padding: 12px 17px;
+}
+
+#toDoContainer {
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 330px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  right: 60px;
+  font-size: 20px;
+  color: #c4c4c4;
+  border: 2px solid #c4c4c4;
+  border-radius: 71px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.close:hover {
+  background-color: #9953f1;
+  color: white;
+}
+
+.empty-list {
+  display: none;
+}
+.add-list {
+  display: block;
+}
