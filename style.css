@@ -8,7 +8,7 @@ button {
 }
 .container {
   position: relative;
-  margin-top: 170px;
+  margin-top: 14%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +47,7 @@ button {
   border-radius: 71px;
   background: none;
 }
-#sortButton {
+.sort-button {
   background: none;
   border: none;
   position: absolute;

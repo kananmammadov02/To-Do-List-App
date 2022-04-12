@@ -2,6 +2,7 @@ let addToDoButton = document.getElementById("addButton");
 let toDoContainer = document.getElementById("toDoContainer");
 let myInput = document.getElementById("myInput");
 let clearInput = document.getElementById("clearInput");
+let sortButton=document.getElementById("sortButton")
 checkList();
 function checkList() {
   if (toDoContainer.children.length == 0) {
@@ -55,3 +56,46 @@ addToDoButton.addEventListener("click", function () {
   }
 });
 
+function sortListDir() {
+  var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+  list = document.getElementById("toDoContainer");
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    b = list.getElementsByTagName("p");
+    for (i = 0; i < (b.length - 1); i++) {
+
+      shouldSwitch = false;
+      
+      if (dir == "asc") {
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          document.querySelector(".sort-button").innerHTML =
+          '<img src="/image/Group 73.png" alt="sort" />';
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
+          document.querySelector(".sort-button").innerHTML =
+          '<img src="/image/Group 91.png" alt="sort" />';
+
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+      
+      switchcount ++;
+    } else {
+      
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
