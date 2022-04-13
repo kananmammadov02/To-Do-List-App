@@ -33,6 +33,7 @@ addToDoButton.addEventListener("click", function () {
   let inputValue = document.getElementById("myInput").value;
   if (inputValue === "") {
     alert("Mətn daxil edilməyib!");
+    checkList()
   } else {
     toDoContainer.appendChild(paragraph);
     paragraph.innerHTML = myInput.value;
